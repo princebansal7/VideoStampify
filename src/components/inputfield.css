@@ -1,0 +1,52 @@
+.inputfield-container {
+  position: relative;
+}
+
+input[type="text"] {
+  background: none;
+  color: var(--secondary-color);
+  padding: 10px 5px;
+  width: 550px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 3px solid var(--secondary-color);
+}
+.inputfield-container > .bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--primary-color);
+  width: 0;
+  transition: width 500ms ease-in-out;
+}
+
+input[type="text"]:focus ~ .bar,
+input[type="text"]:valid ~ .bar {
+  width: 550px;
+}
+.inputfield-container > .text-Label {
+  color: var(--secondary-color);
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 15px;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  transition: 500ms ease-in-out;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+input[type="text"]:focus ~ .text-Label,
+input[type="text"]:valid ~ .text-Label {
+  top: -25px;
+  color: var(--primary-color);
+}
+input[type="text"]:focus ~ .icon,
+input[type="text"]:valid ~ .icon {
+  color: var(--primary-color);
+}

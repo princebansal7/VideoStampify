@@ -1,0 +1,15 @@
+.playclipbutton {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  margin-right: 1rem;
+  background-color: var(--secondary-color);
+  transition: background-color 300ms ease-in-out;
+}
+
+.playclipbutton:hover {
+  background-color: var(--primary-color);
+}
